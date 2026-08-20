@@ -8,7 +8,6 @@ import {
   ShieldCheck, 
   QrCode, 
   Cpu,
-  CheckCircle2,
   Maximize2
 } from 'lucide-react';
 import { projects } from '../data/portfolioData';
@@ -18,8 +17,8 @@ export default function Projects({ onSelectProject }) {
 
   const filters = [
     { id: 'all', label: 'All Projects' },
-    { id: 'government', label: 'Government Portals' },
-    { id: 'enterprise', label: 'Enterprise Systems' },
+    { id: 'government', label: 'Govt Portals' },
+    { id: 'enterprise', label: 'Enterprise' },
     { id: 'ecommerce', label: 'E-Commerce' },
     { id: 'mobile-backend', label: 'Mobile APIs' },
   ];
@@ -30,12 +29,12 @@ export default function Projects({ onSelectProject }) {
 
   const getThumbnailIcon = (type) => {
     switch (type) {
-      case 'qr-airport': return <QrCode size={36} style={{ color: '#38bdf8' }} />;
-      case 'tn-forest': return <ShieldCheck size={36} style={{ color: '#34d399' }} />;
-      case 'epf-engine': return <Cpu size={36} style={{ color: '#818cf8' }} />;
-      case 'appraisal-system': return <Layers size={36} style={{ color: '#fbbf24' }} />;
-      case 'ecommerce-backend': return <Sparkles size={36} style={{ color: '#f43f5e' }} />;
-      default: return <FolderGit2 size={36} style={{ color: '#10b981' }} />;
+      case 'qr-airport': return <QrCode size={32} style={{ color: '#38bdf8' }} />;
+      case 'tn-forest': return <ShieldCheck size={32} style={{ color: '#34d399' }} />;
+      case 'epf-engine': return <Cpu size={32} style={{ color: '#818cf8' }} />;
+      case 'appraisal-system': return <Layers size={32} style={{ color: '#fbbf24' }} />;
+      case 'ecommerce-backend': return <Sparkles size={32} style={{ color: '#f43f5e' }} />;
+      default: return <FolderGit2 size={32} style={{ color: '#10b981' }} />;
     }
   };
 
@@ -62,9 +61,9 @@ export default function Projects({ onSelectProject }) {
           style={{
             display: 'flex',
             justifyContent: 'center',
-            gap: '0.6rem',
+            gap: '0.45rem',
             flexWrap: 'wrap',
-            marginBottom: '3rem'
+            marginBottom: '2.5rem'
           }}
         >
           {filters.map((filter) => (
@@ -91,8 +90,8 @@ export default function Projects({ onSelectProject }) {
         <div 
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '2rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
+            gap: '1.5rem',
             maxWidth: '1200px',
             margin: '0 auto'
           }}
@@ -100,7 +99,7 @@ export default function Projects({ onSelectProject }) {
           {filteredProjects.map((project) => (
             <div 
               key={project.id}
-              className="glass-card glass-card-interactive"
+              className="glass-card glass-card-interactive project-card-item"
               onClick={() => onSelectProject(project)}
               style={{
                 display: 'flex',
@@ -122,7 +121,7 @@ export default function Projects({ onSelectProject }) {
               {/* Card Header Gradient Banner */}
               <div 
                 style={{
-                  height: '140px',
+                  height: '125px',
                   background: `linear-gradient(135deg, ${
                     project.category === 'government' 
                       ? '#064e3b 0%, #0f766e 100%' 
@@ -135,7 +134,7 @@ export default function Projects({ onSelectProject }) {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  padding: '1.5rem',
+                  padding: '1.25rem',
                   position: 'relative',
                   overflow: 'hidden'
                 }}
@@ -150,27 +149,27 @@ export default function Projects({ onSelectProject }) {
                   style={{
                     background: 'rgba(0, 0, 0, 0.45)',
                     backdropFilter: 'blur(8px)',
-                    padding: '0.4rem 0.75rem',
+                    padding: '0.35rem 0.65rem',
                     borderRadius: '8px',
                     color: '#f8fafc',
-                    fontSize: '0.78rem',
+                    fontSize: '0.74rem',
                     fontWeight: 600,
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '0.35rem',
+                    gap: '0.3rem',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     zIndex: 1
                   }}
                 >
-                  <span>View Details</span>
-                  <Maximize2 size={13} />
+                  <span>Details</span>
+                  <Maximize2 size={12} />
                 </div>
               </div>
 
               {/* Card Body */}
               <div 
                 style={{
-                  padding: '1.75rem',
+                  padding: '1.35rem',
                   display: 'flex',
                   flexDirection: 'column',
                   flex: 1,
@@ -179,23 +178,23 @@ export default function Projects({ onSelectProject }) {
               >
                 <div>
                   {/* Category & Company Metadata */}
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
-                    <span className="badge badge-emerald" style={{ fontSize: '0.75rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.65rem', gap: '0.5rem', flexWrap: 'wrap' }}>
+                    <span className="badge badge-emerald" style={{ fontSize: '0.72rem' }}>
                       {project.categoryName}
                     </span>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-                      <Building2 size={13} />
+                    <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                      <Building2 size={12} />
                       {project.company}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 style={{ fontSize: '1.25rem', color: '#f8fafc', marginBottom: '0.6rem', lineHeight: 1.35 }}>
+                  <h3 style={{ fontSize: '1.15rem', color: '#f8fafc', marginBottom: '0.5rem', lineHeight: 1.35 }}>
                     {project.title}
                   </h3>
 
                   {/* Tagline / Summary */}
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.86rem', lineHeight: 1.55, marginBottom: '1.1rem' }}>
                     {project.tagline}
                   </p>
 
@@ -205,20 +204,20 @@ export default function Projects({ onSelectProject }) {
                       style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(3, 1fr)',
-                        gap: '0.5rem',
-                        marginBottom: '1.25rem',
-                        padding: '0.6rem 0.75rem',
+                        gap: '0.4rem',
+                        marginBottom: '1.1rem',
+                        padding: '0.5rem 0.65rem',
                         background: 'rgba(0, 0, 0, 0.35)',
-                        borderRadius: '10px',
+                        borderRadius: '8px',
                         border: '1px solid rgba(255, 255, 255, 0.05)'
                       }}
                     >
                       {project.metrics.map((m, idx) => (
                         <div key={idx} style={{ textAlign: 'center' }}>
-                          <div style={{ fontSize: '0.68rem', color: '#94a3b8', textTransform: 'uppercase', fontFamily: 'var(--font-mono)' }}>
+                          <div style={{ fontSize: '0.65rem', color: '#94a3b8', textTransform: 'uppercase', fontFamily: 'var(--font-mono)' }}>
                             {m.label}
                           </div>
-                          <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#e2e8f0' }}>
+                          <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#e2e8f0', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                             {m.value}
                           </div>
                         </div>
@@ -229,14 +228,14 @@ export default function Projects({ onSelectProject }) {
 
                 {/* Footer of Card: Tech Stack & CTA */}
                 <div>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '1.25rem' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginBottom: '1rem' }}>
                     {project.techStack.slice(0, 4).map((tech, i) => (
                       <span 
                         key={i} 
                         style={{
-                          fontSize: '0.75rem',
+                          fontSize: '0.72rem',
                           fontFamily: 'var(--font-mono)',
-                          padding: '0.2rem 0.55rem',
+                          padding: '0.15rem 0.5rem',
                           borderRadius: '6px',
                           background: 'rgba(255, 255, 255, 0.04)',
                           color: '#94a3b8',
@@ -249,15 +248,15 @@ export default function Projects({ onSelectProject }) {
                     {project.techStack.length > 4 && (
                       <span 
                         style={{
-                          fontSize: '0.75rem',
+                          fontSize: '0.72rem',
                           fontFamily: 'var(--font-mono)',
-                          padding: '0.2rem 0.55rem',
+                          padding: '0.15rem 0.5rem',
                           borderRadius: '6px',
                           background: 'rgba(16, 185, 129, 0.1)',
                           color: '#10b981',
                         }}
                       >
-                        +{project.techStack.length - 4} more
+                        +{project.techStack.length - 4}
                       </span>
                     )}
                   </div>
@@ -267,15 +266,15 @@ export default function Projects({ onSelectProject }) {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'space-between',
-                      paddingTop: '1rem',
+                      paddingTop: '0.85rem',
                       borderTop: '1px solid rgba(255, 255, 255, 0.06)',
                       color: '#10b981',
                       fontWeight: 600,
-                      fontSize: '0.9rem'
+                      fontSize: '0.85rem'
                     }}
                   >
                     <span>View Architecture & Specs</span>
-                    <ArrowUpRight size={18} />
+                    <ArrowUpRight size={16} />
                   </div>
                 </div>
 
