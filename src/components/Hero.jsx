@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Sparkles, 
   ArrowRight, 
@@ -17,7 +17,30 @@ import {
 import { personalInfo, stats } from '../data/portfolioData';
 
 export default function Hero({ onOpenProjectModal }) {
+  const fullName = personalInfo.name || "M. Shahul Hameed";
+  const [displayedName, setDisplayedName] = useState('');
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
+
+  useEffect(() => {
+    let index = 0;
+    setDisplayedName('');
+    setIsTypingComplete(false);
+
+    const timer = setInterval(() => {
+      if (index < fullName.length) {
+        setDisplayedName(fullName.slice(0, index + 1));
+        index++;
+      } else {
+        setIsTypingComplete(true);
+        clearInterval(timer);
+      }
+    }, 90);
+
+    return () => clearInterval(timer);
+  }, [fullName]);
+
   const getStatIcon = (iconName) => {
+
     switch (iconName) {
       case 'Briefcase': return <Briefcase size={20} className="text-emerald-400" />;
       case 'Code': return <Code size={20} className="text-cyan-400" />;
@@ -79,17 +102,33 @@ export default function Hero({ onOpenProjectModal }) {
               </span>
             </div>
 
-            {/* Name & Title */}
+            {/* Name & Title with Typewriter Letter-by-Letter Animation */}
             <h1 
               style={{
                 fontSize: 'clamp(2.5rem, 5.5vw, 4.2rem)',
                 fontWeight: 800,
                 lineHeight: 1.15,
                 marginBottom: '1.25rem',
-                letterSpacing: '-0.03em'
+                letterSpacing: '-0.03em',
+                minHeight: '1.2em'
               }}
             >
-              Hi, I'm <span className="gradient-text">{personalInfo.name}</span>
+              Hi, I'm{' '}
+              <span className="gradient-text" style={{ position: 'relative' }}>
+                {displayedName}
+                <span 
+                  style={{
+                    display: 'inline-block',
+                    width: '3px',
+                    height: '0.85em',
+                    backgroundColor: '#10b981',
+                    marginLeft: '4px',
+                    verticalAlign: 'baseline',
+                    animation: 'blinkCursor 0.9s infinite',
+                    boxShadow: '0 0 8px #10b981'
+                  }}
+                />
+              </span>
             </h1>
 
 
