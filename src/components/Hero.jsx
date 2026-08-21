@@ -153,7 +153,6 @@ export default function Hero({ onOpenProjectModal }) {
             {/* CTAs Action Buttons */}
             <div className="hero-cta-group">
 
-
               <a href="#projects" className="btn btn-secondary btn-lg">
                 <span>Explore Projects</span>
                 <ArrowRight size={18} />
@@ -194,60 +193,6 @@ export default function Hero({ onOpenProjectModal }) {
                   width="380"
                   height="380"
                 />
-
-                {/* Bottom Overlay Label */}
-                <div className="photo-caption-bar">
-                  <div>
-                    <div style={{ fontWeight: 700, fontSize: '0.92rem', color: '#f8fafc' }}>
-                      M. Shahul Hameed (MCA)
-                    </div>
-                    <div style={{ fontSize: '0.74rem', color: '#34d399', fontFamily: 'var(--font-mono)' }}>
-                      Full Stack Web Developer
-                    </div>
-                  </div>
-                  <a
-                    href="/Shahul_Hameed_Resume.pdf"
-                    download="Shahul_Hameed_Resume.pdf"
-                    className="photo-resume-btn"
-                    title="Download Resume"
-                  >
-                    <Download size={14} />
-                    <span>CV</span>
-                  </a>
-                </div>
-              </div>
-
-              {/* Floating Badge 1: Experience */}
-              <div className="floating-badge badge-top-left">
-                <div className="badge-icon-box" style={{ background: 'rgba(16, 185, 129, 0.2)', color: '#10b981' }}>
-                  <Briefcase size={16} />
-                </div>
-                <div>
-                  <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)' }}>Experience</div>
-                  <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#f8fafc' }}>5+ Years</div>
-                </div>
-              </div>
-
-              {/* Floating Badge 2: Tech Stack */}
-              <div className="floating-badge badge-bottom-right">
-                <div className="badge-icon-box" style={{ background: 'rgba(6, 182, 212, 0.2)', color: '#06b6d4' }}>
-                  <Layers size={16} />
-                </div>
-                <div>
-                  <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)' }}>Specialization</div>
-                  <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#38bdf8' }}>Laravel • React • Node</div>
-                </div>
-              </div>
-
-              {/* Floating Badge 3: Verified Badge */}
-              <div className="floating-badge badge-bottom-left">
-                <div className="badge-icon-box" style={{ background: 'rgba(129, 140, 248, 0.2)', color: '#818cf8' }}>
-                  <CheckCircle2 size={16} />
-                </div>
-                <div>
-                  <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)' }}>Govt & Enterprise</div>
-                  <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#c084fc' }}>Production Ready</div>
-                </div>
               </div>
 
             </div>
@@ -255,7 +200,7 @@ export default function Hero({ onOpenProjectModal }) {
 
         </div>
 
-        {/* Key Metric Stats Grid (Responsive 4x1 on Desktop, 2x2 on Mobile) */}
+        {/* Key Metric Stats Grid (Responsive 3 items on Desktop) */}
         <div className="hero-stats-grid">
           {stats.map((stat, index) => (
             <div
@@ -273,7 +218,7 @@ export default function Hero({ onOpenProjectModal }) {
                   fontSize: 'clamp(1.75rem, 3.5vw, 2.4rem)',
                   fontWeight: 800,
                   fontFamily: 'var(--font-mono)',
-                  color: index === 0 ? '#10b981' : index === 1 ? '#06b6d4' : index === 2 ? '#818cf8' : '#f59e0b',
+                  color: index === 0 ? '#10b981' : index === 1 ? '#06b6d4' : '#818cf8',
                   lineHeight: 1,
                   marginBottom: '0.35rem'
                 }}
@@ -441,9 +386,9 @@ export default function Hero({ onOpenProjectModal }) {
         /* Stats Grid */
         .hero-stats-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 1rem;
-          max-width: 100%;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.25rem;
+          max-width: 920px;
           margin: 0 auto;
         }
 

@@ -20,7 +20,6 @@ export const stats = [
   { label: "Years Experience", value: "5+", icon: "Briefcase" },
   { label: "Completed Projects", value: "15+", icon: "Code" },
   { label: "Live Websites", value: "7+", icon: "Globe" },
-  { label: "Client Satisfaction", value: "100%", icon: "Award" },
 ];
 
 export const skillsData = {
