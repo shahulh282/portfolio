@@ -152,18 +152,7 @@ export default function Hero({ onOpenProjectModal }) {
 
             {/* CTAs Action Buttons */}
             <div className="hero-cta-group">
-              <a
-                href="/Shahul_Hameed_Resume.pdf"
-                download="Shahul_Hameed_Resume.pdf"
-                className="btn btn-primary btn-lg"
-                title="Download Shahul Hameed Resume PDF"
-                style={{
-                  boxShadow: '0 4px 20px rgba(16, 185, 129, 0.4)'
-                }}
-              >
-                <Download size={18} />
-                <span>Download Resume</span>
-              </a>
+
 
               <a href="#projects" className="btn btn-secondary btn-lg">
                 <span>Explore Projects</span>
