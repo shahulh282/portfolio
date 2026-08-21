@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Portfolio Main URL -->
+  <url>
+    <loc>https://shahulhameed.dev/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://shahulhameed.dev/shahul-hameed.jpg</image:loc>
+      <image:title>M. Shahul Hameed MCA - Full Stack Developer</image:title>
+      <image:caption>Official portrait photo of M. Shahul Hameed, Full Stack Web Application Developer with 5+ years experience in Laravel, PHP, Node.js, React, and MySQL</image:caption>
+      <image:geo_location>Chennai, Tamil Nadu, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://shahulhameed.dev/og-image.jpg</image:loc>
+      <image:title>M. Shahul Hameed Portfolio Cover</image:title>
+      <image:caption>M. Shahul Hameed Full Stack Developer Portfolio and Resume</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Resume Direct Link -->
+  <url>
+    <loc>https://shahulhameed.dev/Shahul_Hameed_Resume.pdf</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

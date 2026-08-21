@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Allow: /shahul-hameed.jpg
+Allow: /og-image.jpg
+Allow: /Shahul_Hameed_Resume.pdf
+Allow: /resume.pdf
+
+# Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /shahul-hameed.jpg
+Allow: /og-image.jpg
+
+Sitemap: https://shahulhameed.dev/sitemap.xml

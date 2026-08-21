@@ -6,7 +6,10 @@ import {
   Server, 
   ShieldCheck, 
   Cpu, 
-  Clock
+  Clock,
+  Download,
+  FileCheck,
+  CheckCircle
 } from 'lucide-react';
 import { personalInfo, education } from '../data/portfolioData';
 
@@ -65,38 +68,65 @@ export default function About() {
             }}
           >
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1rem' }}>
-                <div 
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.65rem', marginBottom: '1.25rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                  <img 
+                    src="/shahul-hameed.jpg" 
+                    alt="Shahul Hameed Full Stack Developer" 
+                    style={{
+                      width: '46px',
+                      height: '46px',
+                      borderRadius: '12px',
+                      objectFit: 'cover',
+                      border: '2px solid rgba(16, 185, 129, 0.4)',
+                      boxShadow: '0 4px 12px rgba(16, 185, 129, 0.25)'
+                    }}
+                  />
+                  <div>
+                    <h3 style={{ fontSize: '1.15rem', color: '#f8fafc', margin: 0 }}>M. Shahul Hameed</h3>
+                    <div style={{ fontSize: '0.78rem', color: '#34d399', fontFamily: 'var(--font-mono)' }}>MCA • Full Stack Developer</div>
+                  </div>
+                </div>
+
+                <a 
+                  href="/Shahul_Hameed_Resume.pdf" 
+                  download="Shahul_Hameed_Resume.pdf"
+                  className="btn btn-secondary btn-sm"
+                  title="Download Shahul Hameed Resume"
                   style={{
-                    padding: '0.5rem',
-                    borderRadius: '10px',
-                    background: 'rgba(16, 185, 129, 0.15)',
-                    color: '#10b981'
+                    borderColor: 'rgba(16, 185, 129, 0.4)',
+                    color: '#34d399',
+                    padding: '0.35rem 0.75rem',
+                    fontSize: '0.78rem'
                   }}
                 >
-                  <User size={20} />
-                </div>
-                <h3 style={{ fontSize: '1.3rem' }}>Professional Summary</h3>
+                  <Download size={14} />
+                  <span>Resume (PDF)</span>
+                </a>
               </div>
 
-              <p style={{ color: '#cbd5e1', lineHeight: 1.7, fontSize: '0.96rem', marginBottom: '1.25rem' }}>
+              <p style={{ color: '#cbd5e1', lineHeight: 1.7, fontSize: '0.94rem', marginBottom: '1.25rem' }}>
                 {personalInfo.summary}
               </p>
             </div>
 
-            {/* Location Pill & Info */}
+            {/* Location Pill & Quick Details */}
             <div 
               style={{
                 display: 'flex',
-                flexWrap: 'wrap',
-                gap: '0.75rem',
+                flexDirection: 'column',
+                gap: '0.5rem',
                 paddingTop: '1rem',
                 borderTop: '1px solid rgba(255, 255, 255, 0.08)'
               }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
                 <MapPin size={15} style={{ color: '#10b981', flexShrink: 0 }} />
-                <span><strong>Current:</strong> {personalInfo.location}</span>
+                <span><strong>Location:</strong> {personalInfo.location}</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                <FileCheck size={15} style={{ color: '#06b6d4', flexShrink: 0 }} />
+                <span><strong>Resume:</strong> Verified Full-Time & Contract Available</span>
               </div>
             </div>
           </div>
