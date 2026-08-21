@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles, 
-  ArrowRight, 
-  Download, 
-  Briefcase, 
-  Code, 
-  Globe, 
+import {
+  Sparkles,
+  ArrowRight,
+  Download,
+  Briefcase,
+  Code,
+  Globe,
   Award,
   MessageCircle,
   CheckCircle2,
@@ -39,7 +39,7 @@ export default function Hero({ onOpenProjectModal }) {
   return (
     <section id="home" className="hero-section" style={{ position: 'relative', overflow: 'hidden' }}>
       {/* Ambient background glow effects */}
-      <div 
+      <div
         style={{
           position: 'absolute',
           top: '5%',
@@ -55,15 +55,15 @@ export default function Hero({ onOpenProjectModal }) {
       />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        
+
         {/* Main Hero Layout: Text & CTAs on Left, Photo Avatar on Right */}
         <div className="hero-main-layout">
-          
+
           {/* Left Column: Intro text, Title, Tags, Action Buttons */}
           <div className="hero-content-col">
-            
+
             {/* Status Pill */}
-            <div 
+            <div
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -77,7 +77,7 @@ export default function Hero({ onOpenProjectModal }) {
               }}
               className="animate-glow"
             >
-              <span 
+              <span
                 style={{
                   width: '8px',
                   height: '8px',
@@ -93,7 +93,7 @@ export default function Hero({ onOpenProjectModal }) {
             </div>
 
             {/* Name with Typewriter Letter-by-Letter Animation */}
-            <h1 
+            <h1
               style={{
                 fontSize: 'clamp(2.3rem, 5.5vw, 3.8rem)',
                 fontWeight: 800,
@@ -102,10 +102,10 @@ export default function Hero({ onOpenProjectModal }) {
                 letterSpacing: '-0.03em'
               }}
             >
-              Hi, I'm{' '}
+              I'm{' '}
               <span className="gradient-text" style={{ position: 'relative', display: 'inline-block' }}>
                 {displayedName}
-                <span 
+                <span
                   style={{
                     display: 'inline-block',
                     width: '3px',
@@ -121,7 +121,7 @@ export default function Hero({ onOpenProjectModal }) {
             </h1>
 
             {/* Subtitle / Role */}
-            <p 
+            <p
               style={{
                 fontSize: 'clamp(1.05rem, 2.2vw, 1.35rem)',
                 fontWeight: 600,
@@ -138,7 +138,7 @@ export default function Hero({ onOpenProjectModal }) {
               <span style={{ color: '#38bdf8' }}>5+ Years Experience</span>
             </p>
 
-            <p 
+            <p
               style={{
                 fontSize: 'clamp(0.94rem, 1.7vw, 1.05rem)',
                 color: 'var(--text-secondary)',
@@ -152,12 +152,12 @@ export default function Hero({ onOpenProjectModal }) {
 
             {/* CTAs Action Buttons */}
             <div className="hero-cta-group">
-              <a 
-                href="/Shahul_Hameed_Resume.pdf" 
-                download="Shahul_Hameed_Resume.pdf" 
+              <a
+                href="/Shahul_Hameed_Resume.pdf"
+                download="Shahul_Hameed_Resume.pdf"
                 className="btn btn-primary btn-lg"
                 title="Download Shahul Hameed Resume PDF"
-                style={{ 
+                style={{
                   boxShadow: '0 4px 20px rgba(16, 185, 129, 0.4)'
                 }}
               >
@@ -170,10 +170,10 @@ export default function Hero({ onOpenProjectModal }) {
                 <ArrowRight size={18} />
               </a>
 
-              <a 
+              <a
                 href={`https://wa.me/${personalInfo.whatsappNumber}?text=Hi%20Shahul,%20I%20saw%20your%20portfolio%20and%20resume.%20I%20would%20like%20to%20connect.`}
-                target="_blank" 
-                rel="noopener noreferrer" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-secondary btn-lg"
                 style={{ borderColor: 'rgba(37, 211, 102, 0.4)', color: '#4ade80' }}
               >
@@ -191,15 +191,15 @@ export default function Hero({ onOpenProjectModal }) {
           {/* Right Column: Profile Photo Card with Floating Tech Badges */}
           <div className="hero-photo-col">
             <div className="hero-photo-wrapper">
-              
+
               {/* Outer decorative glowing ring */}
               <div className="photo-glow-ring" />
 
               {/* Main Photo Card */}
               <div className="photo-inner-card">
-                <img 
-                  src="/shahul-hameed.jpg" 
-                  alt="M. Shahul Hameed - Full Stack Web Application Developer" 
+                <img
+                  src="/shahul-hameed.jpg"
+                  alt="M. Shahul Hameed - Full Stack Web Application Developer"
                   className="hero-avatar-img"
                   loading="eager"
                   width="380"
@@ -216,9 +216,9 @@ export default function Hero({ onOpenProjectModal }) {
                       Full Stack Web Developer
                     </div>
                   </div>
-                  <a 
-                    href="/Shahul_Hameed_Resume.pdf" 
-                    download="Shahul_Hameed_Resume.pdf" 
+                  <a
+                    href="/Shahul_Hameed_Resume.pdf"
+                    download="Shahul_Hameed_Resume.pdf"
                     className="photo-resume-btn"
                     title="Download Resume"
                   >
@@ -269,7 +269,7 @@ export default function Hero({ onOpenProjectModal }) {
         {/* Key Metric Stats Grid (Responsive 4x1 on Desktop, 2x2 on Mobile) */}
         <div className="hero-stats-grid">
           {stats.map((stat, index) => (
-            <div 
+            <div
               key={index}
               className="glass-card"
               style={{
@@ -279,7 +279,7 @@ export default function Hero({ onOpenProjectModal }) {
                 borderColor: 'rgba(255, 255, 255, 0.08)'
               }}
             >
-              <div 
+              <div
                 style={{
                   fontSize: 'clamp(1.75rem, 3.5vw, 2.4rem)',
                   fontWeight: 800,
