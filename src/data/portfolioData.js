@@ -122,8 +122,8 @@ export const experiences = [
   {
     id: "techface",
     role: "Website Developer",
-    company: "Techface Soft Solution",
-    location: "Chennai, Tamil Nadu",
+    company: "Techface Soft Solutions",
+    location: "Tenkasi, Tamil Nadu",
     period: "Aug 2020 — Sep 2021",
     current: false,
     description: "Constructed bespoke, responsive websites and client-tailored admin control panels.",
