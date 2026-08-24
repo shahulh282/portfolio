@@ -1,11 +1,11 @@
 import React from 'react';
-import { 
-  Code2, 
-  ArrowUp, 
-  Mail, 
-  Phone, 
-  Heart, 
-  Globe 
+import {
+  Code2,
+  ArrowUp,
+  Mail,
+  Phone,
+  Heart,
+  Globe
 } from 'lucide-react';
 import { LinkedInIcon } from './Icons';
 import { personalInfo } from '../data/portfolioData';
@@ -16,7 +16,7 @@ export default function Footer() {
   };
 
   return (
-    <footer 
+    <footer
       style={{
         background: '#04070f',
         borderTop: '1px solid rgba(255, 255, 255, 0.08)',
@@ -26,7 +26,7 @@ export default function Footer() {
       }}
     >
       <div className="container">
-        <div 
+        <div
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -37,7 +37,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-              <div 
+              <div
                 style={{
                   width: '38px',
                   height: '38px',
@@ -174,7 +174,7 @@ export default function Footer() {
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1rem' }}>
               Kodambakkam, Chennai, Tamil Nadu, India - 600024
             </p>
-            <div 
+            <div
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -196,7 +196,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div 
+        <div
           style={{
             paddingTop: '2rem',
             borderTop: '1px solid rgba(255, 255, 255, 0.06)',
@@ -208,7 +208,7 @@ export default function Footer() {
           }}
         >
           <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
-            © {new Date().getFullYear()} M. Shahul Hameed MCA. Built with React & Vite. All rights reserved.
+            © {new Date().getFullYear()} M. Shahul Hameed MCA.
           </div>
 
           <button
